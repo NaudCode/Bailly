@@ -42,56 +42,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 
-    // Année actuelle pour le footer
-    const currentYearSpan = document.getElementById('currentYear');
-    if (currentYearSpan) {
-        currentYearSpan.textContent = new Date().getFullYear();
-    }
-
-    // "Validation" simple du formulaire de contact (côté client)
-    const contactForm = document.getElementById('contact-form');
-    const formStatus = document.getElementById('form-status');
-
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault(); // Empêche l'envoi réel pour cette démo
-
-            const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const subject = document.getElementById('subject').value.trim();
-            const message = document.getElementById('message').value.trim();
-
-            if (!name || !email || !subject || !message) {
-                formStatus.textContent = 'Veuillez remplir tous les champs requis.';
-                formStatus.className = 'form-status error';
-                return;
-            }
-
-            if (!isValidEmail(email)) {
-                formStatus.textContent = 'Veuillez entrer une adresse email valide.';
-                formStatus.className = 'form-status error';
-                return;
-            }
-
-            // Ici, vous ajouteriez la logique d'envoi AJAX vers votre backend
-            // Pour cette démo, on affiche un message de succès
-            formStatus.textContent = 'Votre message a été "envoyé" (simulation). Merci !';
-            formStatus.className = 'form-status success';
-            contactForm.reset(); // Réinitialise le formulaire
-
-            // Cache le message après quelques secondes
-            setTimeout(() => {
-                formStatus.textContent = '';
-                formStatus.className = 'form-status';
-            }, 5000);
-        });
-    }
-
-    function isValidEmail(email) {
-        // Expression régulière simple pour la validation d'email
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-    }
 
     // Active link highlighting based on scroll position
     const sections = document.querySelectorAll('main section[id]');

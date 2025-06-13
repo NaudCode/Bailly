@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
 <header>
     <nav class="container">
         <a href="index.html" class="logo">
-            <img src="images/logo-bailly.png" alt="Logo Bailly Menuiserie">
+            <img src="images/logo-bailly.png" alt="Logo Bailly">
             <span>Bailly Menuiserie</span>
         </a>
         <button class="nav-toggle" aria-label="Ouvrir le menu">
@@ -22,10 +22,8 @@
         </button>
         <ul class="nav-links">
             <li><a href="#accueil">Accueil</a></li>
-            <li><a href="#a-propos">À Propos</a></li>
             <li><a href="#services">Nos Services</a></li>
-            <li><a href="#realisations">Réalisations</a></li>
-            <li><a href="#clients">Nos Clients</a></li>
+            <li><a href="#realisations">Nos réalisations</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -36,7 +34,7 @@
         <div class="hero-content container">
             <h1>La maitrise de l'art du bois. <span class="highlight-blue">Votre menuisier à Nantes.</span></h1>
             <p>Chez Bailly Menuiserie, nous transformons vos idées en réalité avec passion et savoir-faire. De la conception à la pose, nous vous accompagnons dans tous vos projets d'aménagement intérieur et extérieur.</p>
-            <a href="#contact" class="btn btn-primary">Demander un Devis</a>
+            <a href="/pages/contact.html" class="btn btn-primary">Demander un Devis</a>
         </div>
     </section>
 
@@ -48,7 +46,7 @@
                 <p>Nous croyons en l'importance d'un travail soigné, du respect des matériaux et d'une écoute attentive de vos besoins. Modernité, tradition et finitions impeccables sont les maîtres mots de notre démarche.</p>
             </div>
             <div class="about-image">
-                <img src="images/presentation.jpg" alt="Atelier de menuiserie Bailly">
+                <img src="images/entreprise.webp" alt="photo du devant de l'entreprise Bailly Menuiserie">
             </div>
         </div>
     </section>
@@ -56,22 +54,19 @@
     <section id="services" class="bg-light section-padding">
         <div class="container">
             <h2>Nos Services</h2>
-            <div class="services-grid">
-                <div class="service-item">
-                    <img src="images/service-meubles.jpg" alt="Meuble sur mesure en bois">
-                    <h3>Construction de Meubles sur Mesure</h3>
-                    <p>Bibliothèques, dressings, cuisines, mobilier unique... Nous concevons et fabriquons des meubles qui s'intègrent parfaitement à votre espace et à votre style.</p>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/presentation.jpg" alt="Atelier de menuiserie Bailly">
                 </div>
-                <div class="service-item">
-                    <img src="images/service-pose.jpg" alt="Pose de menuiseries intérieures">
-                    <h3>Pose de Menuiseries & Agencement</h3>
-                    <p>Installation de portes, parquets, lambris, et agencement complet de vos intérieurs. Nous assurons une pose minutieuse pour un résultat optimal.</p>
+                <div class="about-text">
+                    <p>
+                        Menuiserie sur mesure, pose d’aménagements intérieurs, isolation et plâtrerie…<br>
+                        Découvrez nos savoir-faire adaptés à vos projets, petits ou grands.
+                    </p>
                 </div>
-                <div class="service-item">
-                    <img src="images/service-placo.jpg" alt="Travaux de placo et isolation">
-                    <h3>Plâtrerie Sèche (Placo) & Isolation</h3>
-                    <p>Création de cloisons, faux plafonds, doublages et solutions d'isolation pour améliorer le confort et l'esthétique de vos pièces.</p>
-                </div>
+            </div>
+            <div class="text-center top-margin">
+            <a href="/pages/services.html" class="btn btn-secondary">Voir tous nos services</a>
             </div>
         </div>
     </section>
@@ -111,37 +106,29 @@
 
     <section id="contact" class="container section-padding">
         <h2>Contactez-Nous</h2>
-        <div class="contact-wrapper">
-            <div class="contact-info">
+        <div class="contact-wrapper" style="display: flex; flex-wrap: wrap; gap: 2rem;">
+            <div class="contact-info text-center" style="flex: 1 1 300px;">
                 <h3>Bailly Menuiserie</h3>
                 <p>450 Rue de l'Étier<br>ZI de La Prairie de Mauves<br>44000 Nantes</p>
                 <p><strong>Téléphone :</strong> <a href="tel:+33600000000">06 00 00 00 00</a></p>
                 <p><strong>Email :</strong> <a href="mailto:contact@bailly.fr">contact@bailly.fr</a></p>
                 <p>N'hésitez pas à nous contacter pour discuter de votre projet ou pour obtenir un devis personnalisé.</p>
             </div>
-            <form id="contact-form" class="contact-form">
-                <h3>Demander un Devis</h3>
-                <div class="form-group">
-                    <label for="name">Nom Complet :</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email :</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="subject">Objet :</label>
-                    <input type="text" id="subject" name="subject" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Votre Message / Description du Projet :</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Envoyer la Demande</button>
-                <p id="form-status" class="form-status"></p>
-            </form>
+
+            <div class="contact-map" style="flex: 1 1 400px; min-width: 300px;">
+                <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.832404712846!2d-1.5441021844389347!3d47.222816779165386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805f59c48b6374f%3A0x5220b9146a1e7f3d!2s450%20Rue%20de%20l&#39;%C3%89tier%2C%2044000%20Nantes!5e0!3m2!1sfr!2sfr!4v1686574834556!5m2!1sfr!2sfr"
+                        width="100%"
+                        height="300"
+                        style="border:0; border-radius: 8px;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
         </div>
     </section>
+
 </main>
 
 <footer>

@@ -77,6 +77,10 @@ img {
     margin-top: 2rem;
 }
 
+.left-margin {
+    margin-left: 2rem;
+}
+
 /* Header & Navigation */
 header {
     background-color: var(--white);
@@ -472,6 +476,41 @@ footer a:hover {
     .contact-wrapper {
         flex-direction: column;
         padding: 1.5rem;
+    }
+}
+
+/* contact page */
+.scroll-down {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    animation: bounce 2s infinite;
+}
+
+.scroll-down a {
+    color: #333;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.scroll-down svg {
+    width: 32px;
+    height: 32px;
+    stroke: #555;
+    transition: stroke 0.3s, transform 0.3s;
+}
+
+.scroll-down a:hover svg {
+    stroke: #000;
+    transform: translateY(5px);
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(8px);
     }
 }
 
