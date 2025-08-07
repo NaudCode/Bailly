@@ -21,11 +21,18 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
+body{
     font-family: var(--font-family);
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--white);
+}
+
+.list {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    margin-left: 1rem;
+    color: var(--secondary-text-color);
 }
 
 .container {
@@ -196,7 +203,7 @@ header nav {
 
 /* Hero Section */
 .hero {
-    background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+    /*background: url('../images/hero-bg.jpg') no-repeat center center/cover; */
     color: var(--white);
     min-height: calc(100vh - 70px); /* 70px est la hauteur du header */
     display: flex;
