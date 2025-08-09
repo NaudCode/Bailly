@@ -74,5 +74,13 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', changeLinkState);
     changeLinkState(); // Appel initial
 
+
+    // Mettre à jour l'année dans l'élément #currentYear
+        const yearSpan = document.getElementById("currentYear");
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
+
+
 });
 
