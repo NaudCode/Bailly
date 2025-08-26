@@ -538,3 +538,18 @@ footer a:hover {
         transform: translateY(8px);
     }
 }
+
+
+.swiper {
+    max-width: 900px; /* largeur max du carrousel */
+    margin: 0 auto;   /* centré */
+}
+
+.swiper-slide img {
+    max-width: 80%;   /* réduit l’image (ex : 80% de la largeur du slide) */
+    max-height: 400px; /* limite la hauteur */
+    object-fit: contain; /* garde les proportions */
+    display: block;
+    margin: 0 auto;   /* centre horizontalement */
+    border-radius: 10px;
+}
