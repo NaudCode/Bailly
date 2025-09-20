@@ -17,6 +17,10 @@
     box-sizing: border-box;
 }
 
+.blue{
+    color: var(--primary-blue);
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -28,12 +32,29 @@ body{
     background-color: var(--white);
 }
 
+
+.about-content .about-text {
+    text-align: left;
+}
+
+
 .list {
-    font-family: var(--font-family);
-    line-height: 1.6;
-    margin-left: 1rem;
+    list-style: disc;
+    list-style-position: outside;
+    padding-left: 2.2rem;
+    margin: 1rem 0;
     color: var(--secondary-text-color);
 }
+
+
+.list li {
+    margin-bottom: 0.6rem;
+    line-height: 1.5;
+    text-align: left;
+}
+
+
+
 
 .container {
     width: 90%;
@@ -572,6 +593,13 @@ footer a:hover {
     color: var(--text-color);
 }
 
+#realisations {
+    padding-bottom: 2rem;
+}
+
+.site-footer {
+    margin-top: 0;
+}
 
 
 
@@ -685,3 +713,43 @@ footer a:hover {
     line-height: 0; /* Supprime l'espace en dessous de l'image */
 }
 
+
+/* Section Pourquoi nous choisir ? */
+.why-choose-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+.why-choose-list li {
+    margin-bottom: 1.2rem;
+    padding-left: 28px;
+    position: relative;
+    line-height: 1.6;
+    text-align: left;
+}
+
+
+.why-choose-section {
+    text-align: left;
+}
+
+
+.why-choose-section h2 {
+    text-align: center;
+}
+
+
+.why-choose-section ul {
+    list-style: disc;
+    list-style-position: outside;
+    padding-left: 2rem;
+    margin: 1rem 0;
+}
+
+.why-choose-section li {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    text-align: left;
+}
