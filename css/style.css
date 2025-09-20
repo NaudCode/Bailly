@@ -75,6 +75,7 @@ h3 { font-size: 1.5rem; }
 p {
     margin-bottom: 1rem;
     color: var(--secondary-text-color);
+    text-align: left;
 }
 
 a {
